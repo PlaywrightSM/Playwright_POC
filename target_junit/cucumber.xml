@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="14.574">
+<testcase classname="PlayWright Demo MVC Website" name="Navigate to Playwright Demo MVC Website and perform actions" time="14.442">
+<system-out><![CDATA[Given User navigates to Playwright Demo Website.............................passed
+When User clicks on MVC Link................................................passed
+Then User clicks on Downloads button........................................passed
+And User clicks on Blog button..............................................passed
+And User navigates back to MVC page.........................................passed
+And User clicks on Github Link..............................................passed
+And User performs certain actions on the Master Repo........................passed
+And User login into Github account..........................................passed
+]]></system-out>
+</testcase>
+</testsuite>
