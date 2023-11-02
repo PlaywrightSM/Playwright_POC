@@ -1,16 +1,26 @@
 package stepdef;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import stepdefimpl.SauceDemoStepDefImpl;
+import java.io.IOException;
+import io.cucumber.java.Scenario;
+
 
 public class SauceDemoStepDef {
 
-    SauceDemoStepDefImpl impl = new SauceDemoStepDefImpl();
+    @Before(order = 1)
+    public void before(Scenario scenario) {
+        // Pass the scenario object to the class
+        SharedDataUtil.setScenario(scenario);
+        impl = new SauceDemoStepDefImpl(SharedDataUtil.getScenario());
+    }
+
+    SauceDemoStepDefImpl impl = new SauceDemoStepDefImpl(SharedDataUtil.getScenario());
     @Given("User navigate to SauceDemo Website")
-    public void userNavigateToSauceDemoWebsite() {
+    public void userNavigateToSauceDemoWebsite() throws IOException {
         impl.navigateToSauceDemo();
     }
 
@@ -43,4 +53,5 @@ public class SauceDemoStepDef {
     public void userCheckoutTheCartItems() {
         impl.checkout();
     }
+
 }
