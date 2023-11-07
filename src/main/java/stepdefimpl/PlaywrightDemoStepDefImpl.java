@@ -3,6 +3,7 @@ package stepdefimpl;
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.options.AriaRole;
 import com.microsoft.playwright.options.MouseButton;
+import io.cucumber.java.Scenario;
 
 import java.nio.file.Paths;
 
@@ -14,6 +15,10 @@ public class PlaywrightDemoStepDefImpl {
     BrowserContext context = browser.newContext();
 
     Page page = context.newPage();
+    private Scenario scenario;
+    public PlaywrightDemoStepDefImpl(Scenario scenario) {
+        this.scenario =scenario;
+    }
 
     public void navigateToMVC() {
         page.navigate("https://demo.playwright.dev/todomvc/");

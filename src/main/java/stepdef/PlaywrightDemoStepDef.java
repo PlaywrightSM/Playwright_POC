@@ -1,14 +1,16 @@
 package stepdef;
 
+import common.SharedDataUtil;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import stepdefimpl.PlaywrightDemoStepDefImpl;
+import common.SharedDataUtil;
 
 public class PlaywrightDemoStepDef {
 
-    PlaywrightDemoStepDefImpl impl = new PlaywrightDemoStepDefImpl();
+    PlaywrightDemoStepDefImpl impl = new PlaywrightDemoStepDefImpl(SharedDataUtil.getScenario());
     @Given("User navigates to Playwright Demo Website")
     public void userNavigatesToPlaywrightDemoWebsite() {
         impl.navigateToMVC();

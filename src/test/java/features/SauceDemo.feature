@@ -1,3 +1,4 @@
+@SauceDemo
 Feature: PlayWright Demo with SauceDemo Website
   Scenario: Navigate to SauceDemo Website and Perform actions
     Given User navigate to SauceDemo Website

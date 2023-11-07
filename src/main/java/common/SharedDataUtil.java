@@ -1,4 +1,4 @@
-package stepdef;
+package common;
 import io.cucumber.java.Scenario;
 
 public class SharedDataUtil {
