@@ -6,7 +6,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import stepdefimpl.SauceDemoStepDefImpl;
+
 import java.io.IOException;
+
 import io.cucumber.java.Scenario;
 
 
@@ -20,6 +22,7 @@ public class SauceDemoStepDef {
     }
 
     SauceDemoStepDefImpl impl = new SauceDemoStepDefImpl(SharedDataUtil.getScenario());
+
     @Given("User navigate to SauceDemo Website")
     public void userNavigateToSauceDemoWebsite() throws IOException {
         impl.navigateToSauceDemo();

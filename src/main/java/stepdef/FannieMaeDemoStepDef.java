@@ -1,5 +1,6 @@
 package stepdef;
 
+import common.SharedDataUtil;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,7 +9,8 @@ import stepdefimpl.FannieMaeDemoStepDefImpl;
 
 public class FannieMaeDemoStepDef {
 
-    FannieMaeDemoStepDefImpl impl = new FannieMaeDemoStepDefImpl();
+    FannieMaeDemoStepDefImpl impl = new FannieMaeDemoStepDefImpl(SharedDataUtil.getScenario());
+
     @Given("User navigates to FannieMae Website")
     public void userNavigatesToFannieMaeWebsite() {
         impl.navigateToFannie();

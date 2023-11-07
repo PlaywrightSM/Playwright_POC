@@ -1,3 +1,4 @@
+@MVCDemo
 Feature: PlayWright Demo MVC Website
 
   Scenario: Navigate to Playwright Demo MVC Website and perform actions

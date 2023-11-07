@@ -31,4 +31,8 @@ public class SauceDemoCheckoutPage {
     public void finishCheckout() {
         page.locator("[data-test=\"finish\"]").click();
     }
+
+    public void startCheckout() {
+        page.locator("[data-test=\"checkout\"]").click();
+    }
 }

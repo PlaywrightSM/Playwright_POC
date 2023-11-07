@@ -14,7 +14,7 @@ import java.util.List;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/features/SauceDemo.feature",
+        features = "src/test/java/features/FanniemaeDemo.feature",
         glue = "stepdef", // Change to your step definitions package
         plugin = {
                 "json:target/cucumber-report/cucumber.json", // Specify a JSON report file

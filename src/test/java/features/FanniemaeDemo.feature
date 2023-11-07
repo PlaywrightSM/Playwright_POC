@@ -1,3 +1,4 @@
+@FanniemaeDemo
 Feature: PlayWright Demo FannieMae Website
 
   Scenario: Navigate to FannieMae Website and perform actions
